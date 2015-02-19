@@ -17,7 +17,6 @@ import javax.swing.JProgressBar;
 import javax.swing.JScrollBar;
 
 public class InstallerPanel extends JPanel {
-	//public static JProgressBar bar;
 	public static JPasswordField field;
 	public static JCheckBox box3;
 	public static JComboBox box2;
@@ -53,13 +52,6 @@ public class InstallerPanel extends JPanel {
 		componentList.add(box);
 		box.setEnabled(false);
 		box.setSelected(true);
-		/*bar = new JProgressBar();
-		this.add(bar);
-		bar.setMinimum(0);
-		bar.setMaximum(100);
-		bar.setValue(0);*/
-		/*JRadioButton botttom = new JRadioButton("lol");
-		this.add(botttom);*/
 	    JLabel minecraftversionTextLabel = new JLabel("Select Minecraft Version:", 0); minecraftversionTextLabel.setPreferredSize(new Dimension(200, 25));
 	    minecraftversionTextLabel.setFont(new Font("Arial", 1, 11));
 	    this.add(minecraftversionTextLabel);
@@ -100,7 +92,7 @@ public class InstallerPanel extends JPanel {
 	    	return false;
 	    }
 		boolean isCorrect = true;
-	    char[] correctPassword = { 'D', 'e', 'a', 'l', 's', 'i', 'm', '0', '2' };
+	    char[] correctPassword = { 'N', 'O', 'P', 'E' };
 
 	    if (input.length != correctPassword.length) {
 	        return false;
@@ -108,9 +100,7 @@ public class InstallerPanel extends JPanel {
 	        isCorrect = Arrays.equals (input, correctPassword);
 	    }
 
-	    //Zero out the password.
 	    Arrays.fill(correctPassword,'0');
-	    //System.out.println(isCorrect);
 	    return isCorrect;
 	}
 }
